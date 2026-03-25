@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --bg-start: #08111f;
+  --bg-mid: #101b31;
+  --bg-end: #172554;
+  --card: rgba(15, 23, 42, 0.7);
+  --card-border: rgba(148, 163, 184, 0.18);
+  --text-main: #e2e8f0;
+  --text-soft: #94a3b8;
+  --accent: #f97316;
+  --accent-2: #14b8a6;
+}
+
+html,
+body,
+#__next {
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(20, 184, 166, 0.2), transparent 32%),
+    radial-gradient(circle at top right, rgba(249, 115, 22, 0.2), transparent 28%),
+    linear-gradient(135deg, var(--bg-start), var(--bg-mid) 48%, var(--bg-end));
+  color: var(--text-main);
+  font-family: var(--font-body), sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: radial-gradient(circle at center, black, transparent 88%);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.45) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 999px;
+}
+
+.panel {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.18);
+  backdrop-filter: blur(18px);
+}
+
+.font-display {
+  font-family: var(--font-display), sans-serif;
+}
+
+.soft-text {
+  color: var(--text-soft);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #fb923c, #2dd4bf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
