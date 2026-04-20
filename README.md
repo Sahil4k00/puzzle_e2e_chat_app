@@ -1,5 +1,5 @@
 # Puzzle Invite E2E Chat
-
+ 
 A full-stack one-to-one encrypted chat application built with Next.js, Express, MongoDB, Socket.IO, JWT auth, and client-side hybrid encryption with the Web Crypto API.
 
 ## Use it here
